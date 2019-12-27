@@ -8,12 +8,20 @@ import { ProductsPage } from "./pages/ProductsPage";
 import { SingleProductPage } from "./pages/SingleProductPage";
 import { DefaultPage } from "./pages/DefaultPage";
 
+import { Navbar } from "./components/Navbar";
+import { Sidebar } from "./components/Sidebar";
+import { SideCart } from "./components/SideCart";
+import { Footer } from "./components/Footer";
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <Router>
+      <Navbar />
+      <Sidebar />
+      <SideCart />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
@@ -23,6 +31,7 @@ function App() {
         <Route path="/cart" component={CartPage} />
         <Route component={DefaultPage} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
