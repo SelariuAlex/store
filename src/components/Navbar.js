@@ -2,7 +2,6 @@ import React from "react";
 import { FaBars, FaCartPlus } from "react-icons/fa";
 import styled from "styled-components";
 import { ProductConsumer } from "../context";
-import logo from "../images/logo.svg";
 
 export const Navbar = () => {
   return (
@@ -13,7 +12,9 @@ export const Navbar = () => {
           <NavWrapper>
             <div className="nav-center">
               <FaBars className="nav-icon" onClick={handleSidebar} />
-              <img src={logo} alt="store logo" />
+              <h3 className="logo">
+                <span>Alex</span>Store
+              </h3>
               <div className="nav-cart">
                 <FaCartPlus
                   className="nav-icon"
@@ -64,5 +65,9 @@ const NavWrapper = styled.nav`
     right: -12px;
     padding: 0 5px;
     border-radius: 50%;
+  }
+
+  .logo span {
+    color: var(--primaryColor);
   }
 `;
