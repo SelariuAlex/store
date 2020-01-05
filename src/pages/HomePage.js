@@ -6,7 +6,9 @@ export const HomePage = () => {
   return (
     <div>
       <Hero title="CPUs" max="true">
-        <Link to="/products">Our products</Link>
+        <Link to="/products" className="main-link">
+          Our products
+        </Link>
       </Hero>
     </div>
   );

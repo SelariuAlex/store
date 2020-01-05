@@ -26,3 +26,21 @@ body {
 .text-main {
   color: var(--primaryColor);
 }
+
+.main-link {
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  outline: 2px solid var(--primaryColor);
+  outline-offset: 4px;
+}
+
+.main-link:hover {
+  text-decoration: none;
+  background: #0191d3;
+  outline-color: #0191d3;
+  color: var(--mainGrey);
+}
