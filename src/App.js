@@ -6,7 +6,6 @@ import { ContactPage } from "./pages/ContactPage";
 import { HomePage } from "./pages/HomePage";
 import { ProductsPage } from "./pages/ProductsPage";
 import { SingleProductPage } from "./pages/SingleProductPage";
-import { ErrorPage } from "./pages/ErrorPage";
 
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
@@ -15,6 +14,7 @@ import { Footer } from "./components/Footer";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { DefaultPage } from "./pages/DefaultPage";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         <Route exact path="/products" component={ProductsPage} />
         <Route path="/products/:id" component={SingleProductPage} />
         <Route path="/cart" component={CartPage} />
-        <Route path="*" component={ErrorPage} />
+        <Route path="*" component={DefaultPage} />
       </Switch>
       <Footer />
     </Router>
