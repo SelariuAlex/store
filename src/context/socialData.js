@@ -8,7 +8,7 @@ export const socialData = [
     url: "https://www.linkedin.com/in/alexandru-selariu-3a1262183/"
   },
   {
-    id: 1,
+    id: 2,
     icon: <FaTwitter className="icon" />,
     url: "https://twitter.com/AlexandruSelar1"
   }
