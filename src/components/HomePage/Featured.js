@@ -9,7 +9,7 @@ export const Featured = () => {
     <section className="py-5">
       <div className="container">
         <Title title="Featured products" center="true" />
-        <div className="row">
+        <div className="row py-5">
           <ProductConsumer>
             {value => {
               const { featuredProducts } = value;
@@ -20,7 +20,7 @@ export const Featured = () => {
             }}
           </ProductConsumer>
         </div>
-        <div className="row mt-5">
+        <div className="row my-5">
           <div className="col text-center">
             <Link to="products" className="main-link">
               Our products
