@@ -101,6 +101,32 @@ class ProductProvider extends Component {
     this.setState({ cartOpen: false });
   };
 
+  getTotals = () => {
+    let subTotal = 0;
+    let cartItems = 0;
+    this.state.cart.forEach(item => {
+      subTotal += item.total;
+      cartItems += item.count;
+    });
+
+    subTotal = parseFloat(subTotal.toFixed(2));
+    let tax = subTotal * 0.2;
+    tax = parseFloat(tax.toFixed(2));
+    let total = subTotal + tax;
+    total = parseFloat(total.toFixed(2));
+
+    return {
+      cartItems,
+      subTotal,
+      tax,
+      total
+    };
+  };
+
+  addTotals = () => {};
+
+  syncStorage = () => {};
+
   render() {
     return (
       <ProductContext.Provider
