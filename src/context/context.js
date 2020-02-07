@@ -37,14 +37,19 @@ class ProductProvider extends Component {
 
     let featuredProducts = storeProducts.filter(item => item.featured === true);
 
-    this.setState({
-      storeProducts,
-      filteredProducts: storeProducts,
-      featuredProducts,
-      cart: this.getStorageCart(),
-      singleProduct: this.getStorageProduct(),
-      loading: false
-    });
+    this.setState(
+      {
+        storeProducts,
+        filteredProducts: storeProducts,
+        featuredProducts,
+        cart: this.getStorageCart(),
+        singleProduct: this.getStorageProduct(),
+        loading: false
+      },
+      () => {
+        this.addTotals();
+      }
+    );
   };
 
   getStorageCart = () => {
@@ -123,7 +128,15 @@ class ProductProvider extends Component {
     };
   };
 
-  addTotals = () => {};
+  addTotals = () => {
+    const totals = this.getTotals();
+    this.setState({
+      cartItems: totals.cartItems,
+      cartSubTotal: totals.subTotal,
+      cartTax: totals.tax,
+      cartTotal: totals.total
+    });
+  };
 
   syncStorage = () => {};
 
