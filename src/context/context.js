@@ -138,7 +138,9 @@ class ProductProvider extends Component {
     });
   };
 
-  syncStorage = () => {};
+  syncStorage = () => {
+    localStorage.setItem("cart", JSON.stringify(this.state.cart));
+  };
 
   render() {
     return (
